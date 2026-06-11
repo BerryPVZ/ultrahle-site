@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UltraHLE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="iwebkit6-ultrahle.css">
+</head>
+<body>
+  <div id="topbar" class="black">
+    <a class="leftButton" href="#apps">Apps</a>
+    <h1>UltraHLE</h1>
+    <a class="button" href="https://github.com/BerryPVZ/UltraHLE">GitHub</a>
+  </div>
+
+  <main class="panel" selected="true">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"></p>
+        <h2>Old iOS games, running elsewhere.</h2>
+        <p>
+          UltraHLE focuses on compatibility profiles, Android builds, SQLite fixes,
+          orientation defaults, and app-picker polish for early iOS games.
+        </p>
+        <div class="hero-buttons">
+          <a class="blueButton" href="#apps">View working apps</a>
+          <a class="greenButton" href="https://github.com/BerryPVZ/UltraHLE/releases" target="_blank" rel="noopener noreferrer">Download</a>
+          <a class="discordButton" href="https://discord.gg/xMxsAtBAG7" target="_blank" rel="noopener noreferrer">Join Discord</a>
+          <a class="blueButton" href="https://berrypvz.github.io/ipa-archive-updated/" target="_blank" rel="noopener noreferrer">Go to Database</a>
+          <a class="grayButton" href="#compatibility">Compatibility</a>
+          <a class="grayButton" href="#roadmap">Roadmap</a>
+          <a class="grayButton" href="#wanted">Wanted Apps</a>
+        </div>
+      </div>
+
+      <div class="iphone-frame" aria-label="UltraHLE app picker preview">
+        <div class="phone-title">Showcase</div>
+        <ul id="apps" class="springboard">
+          
+        <li class="app">
+          <a href="#captain-tomato" class="app-link" aria-label="Captain Tomato preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/captain-tomato.png" alt="Captain Tomato icon">
+              <img class="app-icon gif" src="assets/gifs/captain-tomato.gif" alt="Captain Tomato working preview">
+              <span class="preview-bubble">
+                <img src="assets/gifs/captain-tomato.gif" alt="">
+                <b>Captain Tomato</b>
+                <em>Playable profile</em>
+              </span>
+            </span>
+            <span class="app-name">Captain Tomato</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#fuzz-friend" class="app-link" aria-label="Fuzz Friend preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/fuzz-friend.png" alt="Fuzz Friend icon">
+              <img class="app-icon gif" src="assets/gifs/fuzz-friend.gif" alt="Fuzz Friend working preview">
+              <span class="preview-bubble portrait-preview">
+                <img src="assets/gifs/fuzz-friend.gif" alt="">
+                <b>Fuzz Friend</b>
+                <em>Working</em>
+              </span>
+            </span>
+            <span class="app-name">Fuzz Friend</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#hairyblox" class="app-link" aria-label="HairyBlox preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/hairyblox.png" alt="HairyBlox icon">
+              <img class="app-icon gif" src="assets/gifs/hairyblox.gif" alt="HairyBlox working preview">
+              <span class="preview-bubble portrait-preview">
+                <img src="assets/gifs/hairyblox.gif" alt="">
+                <b>HairyBlox</b>
+                <em>Working</em>
+              </span>
+            </span>
+            <span class="app-name">HairyBlox</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#minion-jump" class="app-link" aria-label="Minion Jump preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/minion-jump.png" alt="Minion Jump icon">
+              <img class="app-icon gif" src="assets/gifs/minion-jump.gif" alt="Minion Jump working preview">
+              <span class="preview-bubble">
+                <img src="assets/gifs/minion-jump.gif" alt="">
+                <b>Minion Jump</b>
+                <em>Playable</em>
+              </span>
+            </span>
+            <span class="app-name">Minion Jump</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#potato-panic" class="app-link" aria-label="Potato Panic preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/potato-panic.png" alt="Potato Panic icon">
+              <img class="app-icon gif" src="assets/gifs/potato-panic.gif" alt="Potato Panic working preview">
+              <span class="preview-bubble">
+                <img src="assets/gifs/potato-panic.gif" alt="">
+                <b>Potato Panic</b>
+                <em>Working</em>
+              </span>
+            </span>
+            <span class="app-name">Potato Panic</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#potato-story" class="app-link" aria-label="Potato Story preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/potato-story.png" alt="Potato Story icon">
+              <img class="app-icon gif" src="assets/gifs/potato-story.gif" alt="Potato Story working preview">
+              <span class="preview-bubble">
+                <img src="assets/gifs/potato-story.gif" alt="">
+                <b>Potato Story</b>
+                <em>Working</em>
+              </span>
+            </span>
+            <span class="app-name">Potato Story</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#potatogold" class="app-link" aria-label="PotatoGold preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/potatogold.png" alt="PotatoGold icon">
+              <img class="app-icon gif" src="assets/gifs/potatogold.gif" alt="PotatoGold working preview">
+              <span class="preview-bubble">
+                <img src="assets/gifs/potatogold.gif" alt="">
+                <b>PotatoGold</b>
+                <em>Working</em>
+              </span>
+            </span>
+            <span class="app-name">PotatoGold</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#tomatozombie" class="app-link" aria-label="TomatoZombie preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/tomatozombie.png" alt="TomatoZombie icon">
+              <img class="app-icon gif" src="assets/gifs/tomatozombie.gif" alt="TomatoZombie working preview">
+              <span class="preview-bubble portrait-preview">
+                <img src="assets/gifs/tomatozombie.gif" alt="">
+                <b>TomatoZombie</b>
+                <em>Working</em>
+              </span>
+            </span>
+            <span class="app-name">TomatoZombie</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#pvz-great-wall-hd" class="app-link" aria-label="PvZ Great Wall HD preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/pvz-great-wall-hd.png" alt="PvZ Great Wall HD icon">
+              <img class="app-icon gif" src="assets/gifs/pvz-great-wall.gif" alt="PvZ Great Wall HD working preview">
+              <span class="preview-bubble">
+                <img src="assets/gifs/pvz-great-wall-hd.gif" alt="">
+                <b>PvZ Great Wall HD</b>
+                <em>Showcase slot</em>
+              </span>
+            </span>
+            <span class="app-name">PvZ Great Wall HD</span>
+          </a>
+        </li>
+        <li class="app">
+          <a href="#pvz-great-wall" class="app-link" aria-label="PvZ Great Wall preview">
+            <span class="icon-wrap" tabindex="0">
+              <img class="app-icon still" src="assets/icons/pvz-great-wall.png" alt="PvZ Great Wall icon">
+              <img class="app-icon gif" src="assets/gifs/pvz-great-wall-hd.gif" alt="PvZ Great Wall working preview">
+              <span class="preview-bubble">
+                <img src="assets/gifs/pvz-great-wall.gif" alt="">
+                <b>PvZ Great Wall</b>
+                <em>Showcase slot</em>
+              </span>
+            </span>
+            <span class="app-name">PvZ Great Wall</span>
+          </a>
+        </li>
+        </ul>
+        <div class="phone-links">
+          <span></span><span></span>
+          <span></span><span>Forked from HyperHLE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pageitem callout">
+      <span class="badge">Hover</span>
+      <p>Hover an app icon to swap the icon into a short working GIF preview. On mobile, tap or focus the icon.</p>
+    </section>
+
+    <section id="compatibility" class="section">
+      <h3>Working app showcase</h3>
+      <ul class="app-list">
+        
+            <li id="captain-tomato">
+              <img src="assets/icons/captain-tomato.png" alt="">
+              <span>
+                <b>Captain Tomato</b>
+                <small>Playable profile · at.source.veggie1</small>
+                <em>Tomato runner support profile.</em>
+              </span>
+            </li>
+            <li id="fuzz-friend">
+              <img src="assets/icons/fuzz-friend.png" alt="">
+              <span>
+                <b>Fuzz Friend</b>
+                <small>Working · Fuzz Friend</small>
+                <em>Classic fuzzy physics toy.</em>
+              </span>
+            </li>
+            <li id="hairyblox">
+              <img src="assets/icons/hairyblox.png" alt="">
+              <span>
+                <b>HairyBlox</b>
+                <small>Working · HairyBlox</small>
+                <em>Touch-era puzzle/arcade app.</em>
+              </span>
+            </li>
+            <li id="minion-jump">
+              <img src="assets/icons/minion-jump.png" alt="">
+              <span>
+                <b>Minion Jump</b>
+                <small>Playable · com.apprisetec9.minionjump</small>
+                <em>Landscape/iPad options ready.</em>
+              </span>
+            </li>
+            <li id="potato-panic">
+              <img src="assets/icons/potato-panic.png" alt="">
+              <span>
+                <b>Potato Panic</b>
+                <small>Working · Potato Panic</small>
+                <em>Potato runner family support.</em>
+              </span>
+            </li>
+            <li id="potato-story">
+              <img src="assets/icons/potato-story.png" alt="">
+              <span>
+                <b>Potato Story</b>
+                <small>Working · at.source.potato3D</small>
+                <em>SQLite/progress compatible.</em>
+              </span>
+            </li>
+            <li id="potatogold">
+              <img src="assets/icons/potatogold.png" alt="">
+              <span>
+                <b>PotatoGold</b>
+                <small>Working · PotatoEscapeGoldOneTouchRunner</small>
+                <em>Gold one-touch runner.</em>
+              </span>
+            </li>
+            <li id="tomatozombie">
+              <img src="assets/icons/tomatozombie.png" alt="">
+              <span>
+                <b>TomatoZombie</b>
+                <small>Working · TomatoZombie</small>
+                <em>Tomato/zombie profile.</em>
+              </span>
+            </li>
+            <li id="pvz-great-wall-hd">
+              <img src="assets/icons/pvz-great-wall-hd.png" alt="">
+              <span>
+                <b>PvZ Great Wall HD</b>
+                <small>Showcase slot · com.popcap.ios.chs.PvZGreatWallHD</small>
+                <em>Great Wall Edition HD slot.</em>
+              </span>
+            </li>
+            <li id="pvz-great-wall">
+              <img src="assets/icons/pvz-great-wall.png" alt="">
+              <span>
+                <b>PvZ Great Wall</b>
+                <small>Showcase slot · com.popcap.ios.chs.PvZGreatWall</small>
+                <em>Great Wall Edition phone slot.</em>
+              </span>
+            </li>
+      </ul>
+    </section>
+
+    <section class="section two-col">
+      <div class="pageitem">
+        <h3>What UltraHLE is aiming for</h3>
+        <p>
+          A cleaner app picker, stronger game-specific defaults, and less terminal pain.
+          The site is built to show exactly what runs, not to overpromise.
+        </p>
+      </div>
+    </section>
+
+
+    <section id="roadmap" class="section">
+      <h3>Roadmap</h3>
+      <p class="section-intro">
+        UltraHLE is moving toward boring, reliable compatibility: less command-line fighting,
+        cleaner defaults, and more old apps that can be launched straight from the picker.
+      </p>
+      <ol class="roadmap-list">
+        <li>
+          <span class="roadmap-stage">Now</span>
+          <b>Lock down the current working roster</b>
+          <p>Keep Captain Tomato, Fuzz Friend, HairyBlox, Minion Jump, the Potato games, TomatoZombie, and PvZ Great Wall slots documented with the exact options they need.</p>
+        </li>
+        <li>
+          <span class="roadmap-stage">Next</span>
+          <b>Mr. Goo and Happy Goat Maybe</b>
+          <p>Yeah-ish.</p>
+        </li>
+        <li>
+          <span class="roadmap-stage">Next</span>
+          <b>Fully Fix PvZ Games</b>
+          <p>PvZ2, PvZ HD, PvZ GWE, PVZ EDU, PVZ PA, those are planned.</p>
+        </li>
+        <li>
+          <span class="roadmap-stage">Later</span>
+          <b>OpenGL ES 2+ support path</b>
+          <p>Build out the GLES2 compatibility layer so newer early-iOS games have a real path forward instead of hard-stopping at graphics setup.</p>
+        </li>
+        <li>
+          <span class="roadmap-stage">Later</span>
+          <b>Make the app picker feel more iOS-like</b>
+          <p>Better icons, nicer app details, search, favorites, cleaner errors, and fewer crashes when assets or metadata are weird.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="wanted" class="section">
+  <h3>Wanted apps</h3>
+  <p class="section-intro">
+    These are targets UltraHLE needs dumps, test reports, or extra profiling for. If someone has a clean IPA or extracted .app, these are worth checking first.
+  </p>
+
+  <div class="wanted-grid">
+    <article class="wanted-card">
+      <img class="wanted-icon" src="kp.png" alt="Kingdom Prince Pro icon">
+      <h4>Kingdom Prince Pro</h4>
+      <p>Bundle target: <code>com.risinghighapps.kingdomprincepro</code></p>
+      <small>Needed: original IPA or .app so Minion Jump-like defaults can be tested.</small>
+    </article>
+  </div>
+</section>
+
+
+    <footer>
+      <p>UltraHLE -- WARNING! SOME APPS MAY NOT FULLY WORK ON ANDROID DUE TO LACK OF TESTING ON SAID PLATFORM AND MIXED DRIVER SUPPORT!!</p>
+    </footer>
+  </main>
+
+  <script>
+    // Touch helper: tapping an icon briefly shows the GIF on phones/tablets.
+    // Bubbles near the top of the roster drop downward so they don't fly off the page.
+    function updateBubbleDirection(icon) {
+      var roster = icon.closest('.springboard');
+      if (!roster) return;
+
+      var iconTop = icon.offsetTop;
+      var bubble = icon.querySelector('.preview-bubble');
+      var bubbleHeight = bubble ? bubble.offsetHeight : 190;
+
+      if (iconTop < bubbleHeight + 18) {
+        icon.classList.add('bubble-down');
+      } else {
+        icon.classList.remove('bubble-down');
+      }
+    }
+
+    document.querySelectorAll('.icon-wrap').forEach(function(icon) {
+      icon.addEventListener('mouseenter', function() { updateBubbleDirection(icon); });
+      icon.addEventListener('focus', function() { updateBubbleDirection(icon); });
+      icon.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        updateBubbleDirection(icon);
+        document.querySelectorAll('.icon-wrap.peek').forEach(function(open) {
+          if (open !== icon) open.classList.remove('peek');
+        });
+        icon.classList.toggle('peek');
+      });
+    });
+  </script>
+</body>
+</html>

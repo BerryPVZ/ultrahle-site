@@ -1,0 +1,652 @@
+/* UltraHLE iWebKit 6-style stylesheet.
+   This is self-contained, so the page works even without the old iWebKit files. */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #0b1420;
+}
+
+body {
+  margin: 0;
+  color: #152034;
+  font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(73, 139, 183, .32), transparent 24rem),
+    radial-gradient(circle at 80% 35%, rgba(28, 80, 120, .35), transparent 25rem),
+    linear-gradient(#d9e6f2 0, #9eb7ce 44%, #102030 100%);
+}
+
+/* iWebKit-ish top bar */
+#topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 45px;
+  padding: 0 10px;
+  border-bottom: 1px solid rgba(0,0,0,.85);
+  background:
+    linear-gradient(#555 0%, #303030 48%, #191919 49%, #070707 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,.18) inset, 0 2px 10px rgba(0,0,0,.35);
+}
+
+#topbar h1 {
+  position: absolute;
+  left: 92px;
+  right: 92px;
+  top: 0;
+  margin: 0;
+  line-height: 45px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 -1px 0 black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.leftButton,
+.button,
+.blueButton,
+.greenButton,
+.discordButton,
+.grayButton {
+  display: inline-block;
+  min-height: 30px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  border: 1px solid rgba(0,0,0,.7);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.65);
+  box-shadow: 0 1px 0 rgba(255,255,255,.26) inset;
+}
+
+.leftButton,
+.button {
+  position: relative;
+  top: 7px;
+  font-size: 12px;
+  background: linear-gradient(#626262, #222);
+}
+
+.button {
+  float: right;
+}
+
+.panel {
+  width: min(1120px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 370px;
+  gap: 34px;
+  align-items: center;
+}
+
+.hero-copy {
+  padding: 22px;
+  border-radius: 18px;
+  color: white;
+  background:
+    linear-gradient(rgba(6,18,32,.88), rgba(6,18,32,.72)),
+    radial-gradient(circle at 20% 10%, rgba(92,160,220,.5), transparent 18rem);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 18px 50px rgba(0,0,0,.32);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #b5d9ff;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.hero h2 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 6vw, 66px);
+  line-height: .95;
+  letter-spacing: -.05em;
+  text-shadow: 0 3px 16px rgba(0,0,0,.45);
+}
+
+.hero-copy p {
+  max-width: 58ch;
+  color: #e8f4ff;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.blueButton {
+  background: linear-gradient(#5eb4ff, #1769c4 50%, #064887 51%, #003766);
+}
+
+.greenButton {
+  background: linear-gradient(#7ee67a, #2ba83c 50%, #147928 51%, #075c1a);
+}
+
+.discordButton {
+  background: linear-gradient(#9da6ff, #6269d9 50%, #464bb1 51%, #33358a);
+}
+
+.grayButton {
+  background: linear-gradient(#f8f8f8, #bfc7d2 50%, #909baa 51%, #707b8c);
+  color: #17202f;
+  text-shadow: 0 1px 0 rgba(255,255,255,.6);
+}
+
+/* App picker / springboard */
+.iphone-frame {
+  position: relative;
+  width: 348px;
+  min-height: 546px;
+  margin: 0 auto;
+  overflow: visible;
+  border: 14px solid #050505;
+  border-top-width: 56px;
+  border-radius: 20px;
+  background: #000;
+  box-shadow: 0 22px 70px rgba(0,0,0,.42);
+}
+
+.phone-title {
+  position: absolute;
+  left: -14px;
+  right: -14px;
+  top: -45px;
+  height: 42px;
+  padding-top: 8px;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  background: #252525;
+  border-radius: 10px 10px 0 0;
+}
+
+.springboard {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px 15px;
+  margin: 0;
+  padding: 14px 9px 0;
+  list-style: none;
+}
+
+.app {
+  text-align: center;
+  min-width: 0;
+}
+
+.app-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 2px 4px black;
+}
+
+.icon-wrap {
+  position: relative;
+  display: block;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 4px;
+  outline: none;
+}
+
+.app-icon {
+  position: absolute;
+  inset: 0;
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 13px;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.5) inset,
+    0 2px 9px rgba(0,0,0,.55);
+  transition: opacity .15s ease, transform .15s ease, filter .15s ease;
+}
+
+.app-icon.gif {
+  opacity: 0;
+  z-index: 2;
+  border: 2px solid rgba(255,255,255,.85);
+}
+
+.icon-wrap:hover .still,
+.icon-wrap:focus .still,
+.icon-wrap.peek .still {
+  opacity: 0;
+}
+
+.icon-wrap:hover .gif,
+.icon-wrap:focus .gif,
+.icon-wrap.peek .gif {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.app-name {
+  display: block;
+  min-height: 30px;
+  font-size: 11px;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.preview-bubble {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  bottom: 72px;
+  width: 240px;
+  padding: 8px;
+  z-index: 30;
+  opacity: 0;
+  transform: translate(-50%, 8px) scale(.96);
+  border-radius: 18px;
+  color: white;
+  text-align: left;
+  background: rgba(10,16,24,.94);
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 16px 38px rgba(0,0,0,.55);
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.preview-bubble::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 8px);
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  background: rgba(10,16,24,.94);
+  border-right: 1px solid rgba(255,255,255,.22);
+  border-bottom: 1px solid rgba(255,255,255,.22);
+  transform: rotate(45deg);
+}
+
+.preview-bubble img {
+  display: block;
+  width: 100%;
+  height: 132px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 7px;
+}
+
+.preview-bubble b,
+.preview-bubble em {
+  display: block;
+  font-style: normal;
+}
+
+.preview-bubble em {
+  color: #a8d8ff;
+  font-size: 12px;
+}
+
+.icon-wrap:hover .preview-bubble,
+.icon-wrap:focus .preview-bubble,
+.icon-wrap.peek .preview-bubble {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+
+.icon-wrap.bubble-down .preview-bubble {
+  top: 72px;
+  bottom: auto;
+  transform: translate(-50%, -8px) scale(.96);
+}
+
+.icon-wrap.bubble-down .preview-bubble::after {
+  top: -8px;
+  bottom: auto;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 1px solid rgba(255,255,255,.22);
+  border-top: 1px solid rgba(255,255,255,.22);
+}
+
+.icon-wrap.bubble-down:hover .preview-bubble,
+.icon-wrap.bubble-down:focus .preview-bubble,
+.icon-wrap.bubble-down.peek .preview-bubble {
+  transform: translate(-50%, 0) scale(1);
+}
+
+.portrait-preview {
+  width: 178px;
+}
+
+.portrait-preview img {
+  height: 225px;
+}
+
+
+.phone-links {
+  position: absolute;
+  left: 23px;
+  right: 23px;
+  bottom: 33px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  text-shadow: 0 2px 5px black;
+}
+
+/* iWebKit-ish white list cells */
+.pageitem,
+.app-list {
+  border-radius: 13px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(40,60,90,.35);
+  box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 12px 35px rgba(0,0,0,.18);
+}
+
+.callout {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin: 30px 0;
+  padding: 14px 16px;
+}
+
+.badge {
+  flex: 0 0 auto;
+  padding: 5px 9px;
+  border-radius: 99px;
+  color: white;
+  background: linear-gradient(#59a5ff, #0b60bd);
+  font-weight: 800;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.45);
+}
+
+.callout p {
+  margin: 0;
+}
+
+.section {
+  margin-top: 26px;
+}
+
+.section h3 {
+  margin: 0 0 10px;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,.55);
+  font-size: 22px;
+}
+
+.app-list {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.app-list li {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(70,90,115,.22);
+}
+
+.app-list li:last-child {
+  border-bottom: 0;
+}
+
+.app-list img {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.app-list b,
+.app-list small,
+.app-list em {
+  display: block;
+}
+
+.app-list small {
+  color: #55616f;
+  margin-top: 1px;
+}
+
+.app-list em {
+  color: #293344;
+  font-style: normal;
+  margin-top: 4px;
+}
+
+
+.section-intro {
+  max-width: 780px;
+  margin: 0 0 12px;
+  color: rgba(255,255,255,.9);
+  text-shadow: 0 2px 4px rgba(0,0,0,.45);
+}
+
+.roadmap-list {
+  counter-reset: road;
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 13px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(40,60,90,.35);
+  box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 12px 35px rgba(0,0,0,.18);
+}
+
+.roadmap-list li {
+  position: relative;
+  min-height: 96px;
+  padding: 15px 18px 15px 88px;
+  border-bottom: 1px solid rgba(70,90,115,.22);
+}
+
+.roadmap-list li:last-child {
+  border-bottom: 0;
+}
+
+.roadmap-list li::before {
+  counter-increment: road;
+  content: counter(road);
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  line-height: 46px;
+  font-size: 21px;
+  font-weight: 900;
+  background: linear-gradient(#5eb4ff, #1769c4 50%, #064887 51%, #003766);
+  box-shadow: 0 1px 0 rgba(255,255,255,.35) inset, 0 2px 8px rgba(0,0,0,.22);
+}
+
+.roadmap-stage {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  color: white;
+  background: linear-gradient(#626262, #222);
+  font-size: 12px;
+  font-weight: 800;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.65);
+}
+
+.roadmap-list b,
+.wanted-card h4 {
+  display: block;
+  color: #152034;
+  font-size: 17px;
+}
+
+.roadmap-list p,
+.wanted-card p,
+.wanted-card small {
+  display: block;
+  margin: 4px 0 0;
+  color: #293344;
+}
+
+.wanted-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.wanted-card {
+  position: relative;
+  min-height: 188px;
+  padding: 16px 16px 16px 78px;
+  border-radius: 13px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(40,60,90,.35);
+  box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 12px 35px rgba(0,0,0,.18);
+}
+
+.wanted-icon {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  font-weight: 900;
+  background: linear-gradient(#f8f8f8, #bfc7d2 50%, #909baa 51%, #707b8c);
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+  border: 1px solid rgba(0,0,0,.35);
+  box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 2px 8px rgba(0,0,0,.18);
+}
+
+.wanted-card h4 {
+  margin: 0 0 6px;
+}
+
+.wanted-card small {
+  color: #55616f;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.two-col .pageitem {
+  padding: 16px;
+}
+
+.two-col h3 {
+  color: #152034;
+  text-shadow: none;
+}
+
+code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: #0b3766;
+  background: rgba(0,0,0,.06);
+}
+
+footer {
+  margin-top: 28px;
+  color: rgba(255,255,255,.8);
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+
+@media (max-width: 880px) {
+  .hero,
+  .two-col,
+  .wanted-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .iphone-frame {
+    order: 2;
+  }
+
+  .roadmap-list li {
+    padding-left: 76px;
+  }
+
+  .roadmap-list li::before {
+    left: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  #topbar h1 {
+    left: 64px;
+    right: 64px;
+    font-size: 16px;
+  }
+
+  .leftButton,
+  .button {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .panel {
+    width: calc(100% - 10px);
+    padding-top: 12px;
+  }
+
+  .hero-copy {
+    padding: 16px;
+  }
+
+  .iphone-frame {
+    width: 328px;
+    min-height: 515px;
+    border-left-width: 8px;
+    border-right-width: 8px;
+  }
+
+  .springboard {
+    gap: 15px 10px;
+  }
+
+  .preview-bubble {
+    width: 220px;
+  }
+
+  .phone-links {
+    left: 17px;
+    right: 17px;
+    font-size: 17px;
+  }
+}
